@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ActivitySplashscreen"
+    android:background="@drawable/gradient_background"
+    >
+
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/pikachu_min"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="120dp"
+        />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/black_transparent"
+        android:layout_margin="16dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="32dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"
+                    android:src="@drawable/pokemon_logo_min"
+                    />
+            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textColor="@color/colorSecondaryText"
+                android:textColorHint="@color/colorSecondaryText"
+                android:id="@+id/username_login"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textColor="@color/colorSecondaryText"
+                android:textColorHint="@color/colorSecondaryText"
+                android:inputType="textPassword"
+                android:id="@+id/password_login"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="24sp"
+                android:layout_marginTop="16dp"
+                android:id="@+id/button_login"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>
