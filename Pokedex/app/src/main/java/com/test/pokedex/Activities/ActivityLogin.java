@@ -70,19 +70,17 @@ public class ActivityLogin extends AppCompatActivity {
         if(username.equals("")){
             Toast.makeText(this,"Username cannot be empty",Toast.LENGTH_LONG).show();
             usernameText.setFocusable(true);
-        }else if(password.equals("")){
+        } else if(password.equals("")) {
             Toast.makeText(this,"Password cannot be empty",Toast.LENGTH_LONG).show();
             passwordText.setFocusable(true);
-        }else{
+        } else {
             if(username.equals("pokedex") && password.equals("pokedex")){
                 Intent intent = new Intent(ActivityLogin.this, ActivityList.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(intent);
-            }else{
+            } else {
                 Toast.makeText(this,"Username or Password is not correct",Toast.LENGTH_LONG).show();
             }
         }
-
     }
-
 }

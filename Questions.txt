@@ -1,0 +1,11 @@
+Raymundo Romero Arenas                                                                           
+ID = A00570654
+Wedenesday, March 25, 2020
+
+Questions:
+1) What made it easier for you to implement the view? 
+R = Designing the Activity Detail Layout as it used components from other view layouts.
+R = Extracting the image and name of the Pokemon with the Ion function used on other views.
+
+2) What made it difficult for you to implement the view?    
+R = Extracting the types, stats and moves of the Pokemon as they were stored in arrays.                                                                                                      

@@ -8,8 +8,8 @@
     >
 
     <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:src="@drawable/pokemon_logo_min"
         android:layout_gravity="center"
         android:id="@+id/pokemon_image"
@@ -19,10 +19,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pokemon"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:textSize="20sp"
         android:gravity="center"
+        android:fontFamily="@font/latobold"
+        android:textColor="@color/colorPrimaryText"
         android:id="@+id/pokemon_name"
-
         />
+
 </LinearLayout>

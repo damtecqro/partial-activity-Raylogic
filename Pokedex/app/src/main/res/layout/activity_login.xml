@@ -9,14 +9,13 @@
     >
 
     <ImageView
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:src="@drawable/pikachu_min"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="140dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="420dp"
+        android:src="@drawable/pikachu_min"
         />
-
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -34,42 +33,50 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                >
+                android:gravity="center">
+
                 <ImageView
                     android:layout_width="240dp"
                     android:layout_height="240dp"
-                    android:src="@drawable/pokemon_logo_min"
-                    />
+                    android:src="@drawable/pokemon_logo_min" />
+
             </LinearLayout>
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:hint="Username"
                 android:textSize="24sp"
                 android:gravity="center"
+                android:fontFamily="@font/latoregular"
                 android:textColor="@color/colorSecondaryText"
                 android:textColorHint="@color/colorSecondaryText"
+                android:paddingBottom="16dp"
                 android:id="@+id/username_login"
                 />
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:hint="Password"
                 android:textSize="24sp"
                 android:gravity="center"
+                android:fontFamily="@font/latoregular"
                 android:textColor="@color/colorSecondaryText"
                 android:textColorHint="@color/colorSecondaryText"
                 android:inputType="textPassword"
+                android:paddingBottom="16dp"
                 android:id="@+id/password_login"
                 />
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="Login"
                 style="?android:attr/borderlessButtonStyle"
                 android:textColor="@color/colorSecondaryText"
-                android:textSize="24sp"
+                android:fontFamily="@font/latobold"
+                android:textSize="30sp"
                 android:layout_marginTop="16dp"
                 android:id="@+id/button_login"
                 />

@@ -17,21 +17,18 @@ import kotlinx.android.synthetic.main.activity_list.*
 class ActivityList : AppCompatActivity() {
 
     private var context: Context = this
-
-    private lateinit var data:JsonArray
+    private lateinit var data: JsonArray
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var adapter:AdapterList
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
         setSupportActionBar(toolbar)
 
-        initializeCoponents()
+        initializeComponents()
         initializeListeners()
         initializeData()
-
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -39,24 +36,19 @@ class ActivityList : AppCompatActivity() {
         }
     }
 
-    fun initializeCoponents(){
-
+    private fun initializeComponents(){
+    }
+    private fun initializeListeners(){
     }
 
-    fun initializeListeners(){
-
-    }
-
-    fun initializeData(){
+    private fun initializeData(){
         Ion.with(context)
             .load("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=964")
             .asJsonObject()
             .done { e, result ->
                 if(e == null){
                     Log.i("Output", result.getAsJsonArray("results").size().toString())
-
                     data = result.getAsJsonArray("results")
-
                     initializeList()
                 }
             }
@@ -67,7 +59,6 @@ class ActivityList : AppCompatActivity() {
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         linearLayoutManager.scrollToPosition(0)
 
-
         adapter = AdapterList()
         adapter.AdapterList(context,data)
 
@@ -75,7 +66,5 @@ class ActivityList : AppCompatActivity() {
         recycler_view_list.adapter = adapter
         recycler_view_list.setHasFixedSize(true)
         recycler_view_list.itemAnimator = DefaultItemAnimator()
-
     }
-
 }

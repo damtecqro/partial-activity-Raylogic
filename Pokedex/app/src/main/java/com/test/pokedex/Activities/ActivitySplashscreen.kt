@@ -11,7 +11,6 @@ class ActivitySplashscreen : AppCompatActivity() {
     val SPLASHSCREEN_DURATION:Long = 3000
     private lateinit var handler: Handler
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
